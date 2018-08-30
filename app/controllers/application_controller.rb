@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
    else
      erb :error
    end
- end	  
+ end
 
   get '/account' do
     @session = session
@@ -27,8 +27,8 @@ class ApplicationController < Sinatra::Base
        @user = Helpers.current_user(session)
        erb :account
      end
-   end	  
-  
+   end
+
   get '/logout' do
 session.clear
 redirect '/'
